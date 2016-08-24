@@ -1,0 +1,14 @@
+{
+  "name": "game.alex-web.gr",
+  "version": "1.0.0",
+  "description": "tic tac toe game",
+  "private": true,
+  "devDependencies": {
+    "time-grunt": "*",
+    "grunt-wiredep": "~3.0.1",
+    "grunt": "~1.0.0",
+    "grunt-cli": "~1.2.0",
+    "grunt-bower-install-simple": "~1.2.3",
+    "load-grunt-config": "~0.19.2"
+  }
+}
