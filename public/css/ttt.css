@@ -1,0 +1,55 @@
+.player {
+    position: absolute;
+    top: 50%;
+}
+
+.player.left {
+    left: 0;
+}
+
+.player.right {
+    right: 0;
+}
+
+.boardWrapper {
+    position: relative;
+}
+
+.board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 539px;
+    height: 517px;
+    margin-top: -260px;
+    margin-left: -270px;
+}
+
+.board table tbody tr td {
+    height: 170px;
+    width: 170px;
+    vertical-align: middle;
+    border: 0;
+}
+
+.crosshairs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -260px;
+    margin-left: -270px;
+}
+
+.symbol {
+    width: 160px;
+    height: 150px;
+    cursor: pointer;
+}
+
+.cross {
+    background: url(../assets/cross.png) no-repeat center center;
+}
+
+.circle {
+    background: url(../assets/circle.png) no-repeat center center;
+}
