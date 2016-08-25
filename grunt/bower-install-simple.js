@@ -7,7 +7,7 @@
 module.exports = {
     "main": {
         src: [
-            'index.html'
+            'public/index.html'
         ]
     }
 };
