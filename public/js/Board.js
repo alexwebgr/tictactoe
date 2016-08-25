@@ -6,19 +6,6 @@ var Board = {
   cells: $('.symbol'),
   possibleCombinations: [7, 56, 448, 73, 146, 292, 273, 84],
 
-  win: function (score) {
-    for (var i = 0; i < this.possibleCombinations.length; i++) {
-      if ((this.possibleCombinations[i] & score) === this.possibleCombinations[i]) {
-        return true;
-      }
-    }
-    return false;
-  },
-
-  checkIfFull: function (isFull) {
-    return isFull === 'full';
-  },
-
   initializeBoard: function () {
     this.moves = 0;
     this.currentPlayer = Strings.PLAYER_1;
@@ -46,12 +33,17 @@ var Board = {
     this.updatePlayerLabel();
   },
 
-  updatePlayerLabel: function () {
-    // set the now playing label
-    $('.nowPlaying').text(this.currentPlayer);
-    // set a primary label to the player's letter
-    $('.player .label').removeClass('label-primary');
-    $('.player.' + this.players[this.currentPlayer].css + ' .label').addClass('label-primary');
+  checkIfFull: function (isFull) {
+    return isFull === 'full';
+  },
+
+  win: function (score) {
+    for (var i = 0; i < this.possibleCombinations.length; i++) {
+      if ((this.possibleCombinations[i] & score) === this.possibleCombinations[i]) {
+        return true;
+      }
+    }
+    return false;
   },
 
   checkWinner: function (number) {
@@ -76,6 +68,14 @@ var Board = {
       this.currentPlayer = this.currentPlayer === Strings.PLAYER_1 ? Strings.PLAYER_2 : Strings.PLAYER_1;
       this.updatePlayerLabel();
     }
+  },
+
+  updatePlayerLabel: function () {
+    // set the now playing label
+    $('.nowPlaying').text(this.currentPlayer);
+    // set a primary label to the player's letter
+    $('.player .label').removeClass('label-primary');
+    $('.player.' + this.players[this.currentPlayer].css + ' .label').addClass('label-primary');
   },
 
   updateCell: function (elem) {
