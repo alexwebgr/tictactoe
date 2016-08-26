@@ -16,19 +16,16 @@
     <link href="css/footer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-lg-12">
-            <h4 class="text-center">Alex-web presents</h4>
             <h1 class="text-center">Tic Tac Toe in Javascipt</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-2">
-        </div>
-        <div class="col-lg-8">
-            <div class="player cross left">
-                <span class="text-center label">X</span>
+        <div class="col-lg-12">
+            <div class="player left" id="cross">
+                <div class="symbol cross"></div>
             </div>
             <div class="text-center">
                 <div class="boardWrapper">
@@ -72,22 +69,25 @@
                             </tr>
                         </table>
                     </div>
-                    <img src="assets/board.jpg" width="900" alt="" />
+                    <img src="assets/board.jpg" alt="" />
                 </div>
                 <div>
-                    Now playing: <span class="nowPlaying"></span>
+                    <h2>
+                        Now playing <span class="nowPlaying label label-default"></span>
+                    </h2>
                 </div>
             </div>
-            <div class="player circle right">
-                <span class="text-center label">O</span>
+            <div class="player right" id="circle">
+                <div class="symbol circle"></div>
             </div>
-        </div>
-        <div class="col-lg-2">
         </div>
     </div>
 </div>
 <div class="footer">
-    <div class="col-lg-12">
+    <div class="col-lg-12 text-center bg-success">
+        <h4>
+            Crafted by <a href="http://alex-web.gr" target="_blank">Alex-web</a> @ 2016
+        </h4>
     </div>
 </div>
 

@@ -3,7 +3,7 @@ var Board = {
   players: {},
   moves: 0,
   maxAmountOfMoves: 9,
-  cells: $('.symbol'),
+  cells: $('table .symbol'),
   possibleCombinations: [7, 56, 448, 73, 146, 292, 273, 84],
 
   initializeBoard: function () {
@@ -74,8 +74,8 @@ var Board = {
     // set the now playing label
     $('.nowPlaying').text(this.currentPlayer);
     // set a primary label to the player's letter
-    $('.player .label').removeClass('label-primary');
-    $('.player.' + this.players[this.currentPlayer].css + ' .label').addClass('label-primary');
+    $('.player').removeClass('bg-primary');
+    $('.player#' + this.players[this.currentPlayer].css).addClass('bg-primary');
   },
 
   updateCell: function (elem) {
